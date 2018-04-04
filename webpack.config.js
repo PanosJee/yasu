@@ -21,6 +21,7 @@ var config = {
         inline: false,
         contentBase: "./dst",
     },
+    devtool: 'inline-source-map',
     module: {
         rules: [
             { test: /\.css$/, use: ExtractTextPlugin.extract({ use: 'css-loader?minimize' }) },
