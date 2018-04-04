@@ -1,5 +1,5 @@
 node_modules/
 .vscode/
 dst/*
-
+.idea/
 config.json
