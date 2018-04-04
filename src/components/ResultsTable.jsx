@@ -7,16 +7,20 @@ import 'react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.m
 
 module.exports = class ResultsTable extends React.Component {
     render() {
-        const columns = [{
-            dataField: '_time',
-            text: 'Time'
-        }, {
-            dataField: '_raw',
-            text: 'Raw'
+        function getCols(results) {
+            let keys = new Set([]);
+            let columns = [];
+            results.forEach( row => {
+                let new_keys = new Set(Object.keys(row));
+                keys = new Set([...keys, ...new_keys])
+            });
+            keys.forEach(key => {
+                console.log(key);
+                columns.push({dataField: key, text: key})
+            });
+            return columns;
         }
-        ];
-
-        return ((typeof this.props.results !== 'undefined' && this.props.results.length > 0) ? <BootstrapTable keyField='id' data={this.props.results} columns={columns} pagination={paginationFactory()} /> : null
+        return ((typeof this.props.results !== 'undefined' && this.props.results.length > 0) ? <BootstrapTable keyField='id' data={this.props.results} columns={getCols(this.props.results)} pagination={paginationFactory()} /> : null
         );
     }
 };

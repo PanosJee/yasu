@@ -39,7 +39,6 @@ module.exports = class Search extends React.Component {
             }
         }).then((result) => {
             that.setState({ results: result.data })
-            console.log(result.data);
         }, (error) => console.error(error));
     }
     render() {
