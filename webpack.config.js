@@ -38,6 +38,12 @@ var config = {
                     loader: "babel-loader"
                 }
             },
+            {
+                test: /\.woff($|\?)|\.woff2($|\?)|\.ttf($|\?)|\.eot($|\?)|\.svg($|\?)/,
+                use: {
+                    loader: 'url-loader'
+                }
+            }
         ]
     },
     plugins: [
