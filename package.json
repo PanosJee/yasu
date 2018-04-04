@@ -1,0 +1,34 @@
+{
+  "name": "dty",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "0.18.0",
+    "babel-core": "6.26.0",
+    "babel-loader": "7.1.3",
+    "babel-preset-es2015": "6.24.1",
+    "babel-preset-react": "6.24.1",
+    "bootstrap": "4.0.0",
+    "css-loader": "0.28.10",
+    "extract-text-webpack-plugin": "4.0.0-beta.0",
+    "file-loader": "1.1.11",
+    "react": "*",
+    "react-dom": "*",
+    "react-hot-loader": "4.0.0",
+    "react-router-dom": "4.2.2",
+    "reactstrap": "5.0.0-beta.3",
+    "style-loader": "0.20.2",
+    "webpack": "4.0.1"
+  },
+  "devDependencies": {
+    "url-loader": "0.6.2",
+    "webpack-cli": "2.0.10"
+  }
+}
