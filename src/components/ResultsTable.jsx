@@ -1,6 +1,9 @@
 import './ResultsTable.css';
 import React from 'react';
 import BootstrapTable from 'react-bootstrap-table-next';
+import paginationFactory from 'react-bootstrap-table2-paginator';
+import 'react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.min.css';
+
 
 module.exports = class ResultsTable extends React.Component {
     render() {
@@ -14,7 +17,7 @@ module.exports = class ResultsTable extends React.Component {
         ];
 
         return (
-            <BootstrapTable keyField='id' data={ this.props.results } columns={ columns } />
+            <BootstrapTable keyField='id' data={ this.props.results } columns={ columns } pagination={ paginationFactory() } />
         );
     }
 };
