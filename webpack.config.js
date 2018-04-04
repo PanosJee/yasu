@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var path = require('path');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 var BUILD_DIR = path.resolve(__dirname, 'dst');
@@ -7,6 +8,7 @@ var APP_DIR = path.resolve(__dirname, 'src');
 
 var config = {
     entry: APP_DIR + '/index.jsx',
+    mode: 'development',
     output: {
         path: BUILD_DIR,
         filename: 'bundle.js'
@@ -18,8 +20,8 @@ var config = {
         extensions: ['.js', '.jsx']
     },
     devServer: {
-        inline: false,
-        contentBase: "./dst",
+        contentBase: path.resolve(__dirname, '.'),
+        hot: true
     },
     devtool: 'inline-source-map',
     module: {
@@ -47,7 +49,13 @@ var config = {
         ]
     },
     plugins: [
-        new ExtractTextPlugin('bundle.css')
+        new ExtractTextPlugin('bundle.css'),
+        new HtmlWebpackPlugin({
+            filename: 'index.html',
+            template: 'index.html'
+        }),
+        new webpack.NamedModulesPlugin(),
+        new webpack.HotModuleReplacementPlugin()
     ]
 };
 
