@@ -16,8 +16,7 @@ module.exports = class ResultsTable extends React.Component {
         }
         ];
 
-        return (
-            <BootstrapTable keyField='id' data={ this.props.results } columns={ columns } pagination={ paginationFactory() } />
+        return ((typeof this.props.results !== 'undefined' && this.props.results.length > 0) ? <BootstrapTable keyField='id' data={this.props.results} columns={columns} pagination={paginationFactory()} /> : null
         );
     }
 };
