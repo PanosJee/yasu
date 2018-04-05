@@ -1,7 +1,7 @@
 import React from 'react';
 import { Jumbotron, Button } from 'reactstrap';
 
-module.exports = class NotFound extends React.Component {
+class NotFound extends React.Component {
     render() {
         return (
             <div>
@@ -17,3 +17,5 @@ module.exports = class NotFound extends React.Component {
         );
     }
 }
+
+export default NotFound;

@@ -1,10 +1,9 @@
 import React from 'react';
-import axios from 'axios';
 import Searchbar from '../components/Searchbar';
 import ResultsTable from '../components/ResultsTable';
-import Config from 'Config';
+import splunkSearch from "../services/splunkSearcher";
 
-module.exports = class Search extends React.Component {
+class Search extends React.Component {
     constructor() {
         super();
         this.state = { searchType: '...', searchCommand: '', results: [] };
@@ -32,14 +31,9 @@ module.exports = class Search extends React.Component {
     }
 
     search(event) {
-        var that = this;
-        axios.post(Config.serverUrl, { q: this.state.searchCommand }, {
-            headers: {
-                'Content-Type': 'application/json',
-            }
-        }).then((result) => {
-            that.setState({ results: result.data })
-        }, (error) => console.error(error));
+        splunkSearch(this.state.searchCommand,
+            (results) => this.setState({ results: results }),
+            (error) => console.error(error));
     }
     render() {
         return (
@@ -50,3 +44,5 @@ module.exports = class Search extends React.Component {
         );
     }
 }
+
+export default Search;

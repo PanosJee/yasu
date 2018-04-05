@@ -5,7 +5,7 @@ import paginationFactory from 'react-bootstrap-table2-paginator';
 import 'react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.min.css';
 
 
-module.exports = class ResultsTable extends React.Component {
+class ResultsTable extends React.Component {
     render() {
         function getCols(results) {
             let keys = new Set([]);
@@ -24,3 +24,5 @@ module.exports = class ResultsTable extends React.Component {
         );
     }
 };
+
+export default ResultsTable;

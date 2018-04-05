@@ -1,6 +1,7 @@
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import React from 'react'
 import ReactDOM from 'react-dom';
+import registerServiceWorker from './registerServiceWorker';
 
 import Search from './containers/Search';
 import App from './containers/App';
@@ -12,3 +13,5 @@ ReactDOM.render((
         <App />
     </BrowserRouter>),
     document.getElementById('root'));
+
+registerServiceWorker();

@@ -1,7 +1,7 @@
 import './Searchbar.css'
 import React from 'react';
 
-module.exports = class Searchbar extends React.Component {
+class Searchbar extends React.Component {
     render() {
         return (
             <div className="searchbar-form">
@@ -11,3 +11,5 @@ module.exports = class Searchbar extends React.Component {
         );
     }
 }
+
+export default Searchbar;

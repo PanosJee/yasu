@@ -3,7 +3,7 @@ import { Route, Link, Switch } from 'react-router-dom'
 import Search from './Search'
 import NotFound from '../components/NotFound'
 
-module.exports = class App extends React.Component {
+class App extends React.Component {
     constructor() {
         super();
     }
@@ -19,3 +19,5 @@ module.exports = class App extends React.Component {
         );
     }
 }
+
+export default App;
