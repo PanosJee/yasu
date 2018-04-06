@@ -5,3 +5,8 @@ tr.clickable {
 .resultstable {
     margin: 0 25%;
 }
+
+.download-csv {
+    margin: 0 0 5px;
+    float: right;
+}
