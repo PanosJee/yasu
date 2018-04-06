@@ -25,7 +25,7 @@ class ResultsTable extends React.Component {
             <CSVLink 
                 className='btn btn-primary download-csv'
                 filename='data.csv'
-                target='_blank'
+                target=''
                 data={this.props.results}>
                 CSV
             </CSVLink>
