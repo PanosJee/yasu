@@ -3,7 +3,7 @@ import React from 'react';
 import BootstrapTable from 'react-bootstrap-table-next';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import 'react-bootstrap-table2-paginator/dist/react-bootstrap-table2-paginator.min.css';
-
+import { CSVLink } from 'react-csv';
 
 class ResultsTable extends React.Component {
     render() {
@@ -20,7 +20,18 @@ class ResultsTable extends React.Component {
             });
             return columns;
         }
-        return ((typeof this.props.results !== 'undefined' && this.props.results.length > 0) ? <BootstrapTable keyField='id' data={this.props.results} columns={getCols(this.props.results)} pagination={paginationFactory()} /> : null
+        return ((typeof this.props.results !== 'undefined' && this.props.results.length > 0) ? 
+        <div>
+            <CSVLink 
+                className='btn btn-primary download-csv'
+                filename='data.csv'
+                target='_blank'
+                data={this.props.results}>
+                CSV
+            </CSVLink>
+            <BootstrapTable keyField='id' data={this.props.results} columns={getCols(this.props.results)} pagination={paginationFactory()} /> 
+        </div>
+            : null
         );
     }
 };
