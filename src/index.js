@@ -3,10 +3,9 @@ import React from 'react'
 import ReactDOM from 'react-dom';
 import registerServiceWorker from './registerServiceWorker';
 
-import Search from './containers/Search';
 import App from './containers/App';
 
-import { BrowserRouter, Route, Link } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 
 ReactDOM.render((
     <BrowserRouter>
