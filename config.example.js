@@ -1,7 +1,7 @@
 // This file should be located in './src/config.js'
 
 const config = {
-    "serverUrl": "http://omerl.xyz:3000/users"
+    "serverUrl": "http://host.com/"
 }
 
 export default config;
