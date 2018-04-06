@@ -16,7 +16,7 @@ class ResultsTable extends React.Component {
             });
             keys.forEach(key => {
                 console.log(key);
-                columns.push({dataField: key, text: key})
+                columns.push({dataField: key, text: key, sort: true})
             });
             return columns;
         }
