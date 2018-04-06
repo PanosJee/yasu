@@ -1,33 +1,37 @@
 .searchbar-form {
-    max-width: 60%;
+    max-width: 100%;
     margin: 10px auto;
     padding: 20px;
 }
 
 #searchbar-searchbox {
+    border-radius: 8px 0 0 8px; 
     transition: all 0.30s ease-in-out;
     font-size: 16px;
-    width: 70%;
+    width: 89.5%;
     background: #fff;
     border: 1px solid #ccc;
-    padding: 3%;
+    padding: 22px 30px 0;
     color: #555;
-    margin-right: 5px;
+    height: 70px;
+    resize: none;
 }
 
 #searchbar-searchbox:focus {
     font-size: 14px;
-    box-shadow: 0 0 1px #4cd137;
-    padding: 3.2%;
+    box-shadow: 0 0 0.2px #4cd137;
+    padding: 25px 30px 0;
 }
 
 .searchbar-submit {
-    width: 22%;
-    font-size: 22px;
-    padding: 3.8%;
+    border-radius: 0 8px 8px 0; 
+    width: 10%;
+    font-size: 20px;
+    padding: auto;
     background: #4cd137;
     border-bottom: 2px solid #44bd32;
     color: #fff;
+    height: 70px;
 }
 
 .searchbar-submit:hover {
