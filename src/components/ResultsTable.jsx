@@ -10,27 +10,33 @@ class ResultsTable extends React.Component {
         function getCols(results) {
             let keys = new Set([]);
             let columns = [];
-            results.forEach( row => {
+            results.forEach(row => {
                 let new_keys = new Set(Object.keys(row));
                 keys = new Set([...keys, ...new_keys])
             });
             keys.forEach(key => {
                 console.log(key);
-                columns.push({dataField: key, text: key, sort: true})
+                columns.push({ dataField: key, text: key, sort: true })
             });
             return columns;
         }
-        return ((typeof this.props.results !== 'undefined' && this.props.results.length > 0) ? 
-        <div>
-            <CSVLink 
-                className='btn btn-primary download-csv'
-                filename='data.csv'
-                target=''
-                data={this.props.results}>
-                CSV
-            </CSVLink>
-            <BootstrapTable keyField='id' data={this.props.results} columns={getCols(this.props.results)} pagination={paginationFactory()} /> 
-        </div>
+        return ((typeof this.props.results !== 'undefined' && this.props.results.length > 0) ?
+            <div className="results-table">
+                <CSVLink
+                    className='btn btn-primary download-csv'
+                    filename='data.csv'
+                    target=''
+                    data={this.props.results}>
+                    CSV
+                </CSVLink>
+                <BootstrapTable
+                    keyField='id'
+                    data={this.props.results}
+                    columns={getCols(this.props.results)}
+                    pagination={paginationFactory()}
+                    bordered={false}
+                />
+            </div>
             : null
         );
     }

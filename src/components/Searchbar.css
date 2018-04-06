@@ -1,49 +1,42 @@
 .searchbar-form {
-    max-width: 50%;
+    max-width: 60%;
     margin: 10px auto;
-    padding: 16px;
+    padding: 20px;
 }
 
-.searchbar-searchbox {
-    -webkit-transition: all 0.30s ease-in-out;
-    -moz-transition: all 0.30s ease-in-out;
-    -ms-transition: all 0.30s ease-in-out;
-    -o-transition: all 0.30s ease-in-out;
-    outline: none;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
+#searchbar-searchbox {
+    transition: all 0.30s ease-in-out;
+    font-size: 16px;
     width: 70%;
     background: #fff;
-    margin-bottom: 4%;
     border: 1px solid #ccc;
     padding: 3%;
     color: #555;
-    margin-right: 10px;
-    vertical-align: top;
-    height: 70px;
+    margin-right: 5px;
 }
 
-.searchbar-searchbox:focus {
-    box-shadow: 0 0 5px #43D1AF;
-    padding: 3%;
-    border: 1px solid #43D1AF;
+#searchbar-searchbox:focus {
+    font-size: 14px;
+    box-shadow: 0 0 1px #4cd137;
+    padding: 3.2%;
 }
 
 .searchbar-submit {
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    width: 25%;
-    padding: 3%;
-    background: #43D1AF;
-    border-bottom: 2px solid #30C29E;
-    border-top-style: none;
-    border-right-style: none;
-    border-left-style: none;
+    width: 22%;
+    font-size: 22px;
+    padding: 3.8%;
+    background: #4cd137;
+    border-bottom: 2px solid #44bd32;
     color: #fff;
 }
 
 .searchbar-submit:hover {
-    background: #2EBC99;
+    background: #44bd32;
+    color: #fff;
+}
+
+.searchbar-submit:focus {
+    background: #44bd32;
+    color: #fff;
+    outline: 0;
 }

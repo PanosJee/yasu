@@ -7,6 +7,10 @@ tr.clickable {
 }
 
 .download-csv {
-    margin: 0 0 5px;
     float: right;
+}
+
+.results-table {
+    max-width: 98%;
+    margin: 10px auto;
 }
