@@ -11,16 +11,16 @@
     width: 89.5%;
     background: #fff;
     border: 1px solid #ccc;
-    padding: 22px 30px 0;
+    padding: 5px 30px 0;
     color: #555;
     height: 70px;
     resize: none;
 }
 
 #searchbar-searchbox:focus {
-    font-size: 14px;
+    font-size: 15px;
     box-shadow: 0 0 0.2px #4cd137;
-    padding: 25px 30px 0;
+    padding: 7px 30px 0;
 }
 
 .searchbar-submit {
