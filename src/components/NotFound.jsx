@@ -1,5 +1,5 @@
 import React from 'react';
-import { Jumbotron, Button } from 'reactstrap';
+import { Jumbotron, Button } from 'react-bootstrap';
 
 class NotFound extends React.Component {
     render() {

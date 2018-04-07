@@ -8,7 +8,7 @@ export default class SiteNavbar extends React.Component {
             <Navbar>
                 <Navbar.Header>
                     <Navbar.Brand>
-                        <a href="#home">Yasu</a>
+                        <a href="#">Yasu</a>
                     </Navbar.Brand>
                 </Navbar.Header>
                 <Navbar.Collapse>
