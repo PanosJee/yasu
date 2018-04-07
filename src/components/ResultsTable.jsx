@@ -19,7 +19,7 @@ class ResultsTable extends React.Component {
             });
             return columns;
         }
-        return ((typeof this.props.results !== 'undefined' && this.props.results.length > 0) ?
+        return (
             <div className="results-table">
                 <CSVLink
                     className='btn btn-primary download-csv'
@@ -36,7 +36,6 @@ class ResultsTable extends React.Component {
                     bordered={false}
                 />
             </div>
-            : null
         );
     }
 }

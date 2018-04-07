@@ -1,0 +1,6 @@
+.results-loader {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top: 40px;
+}
