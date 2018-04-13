@@ -8,28 +8,18 @@ import Loader from '../components/Loader';
 class Search extends React.Component {
     constructor() {
         super();
-        this.state = { searchType: '...', searchCommand: '', results: [] };
-        this.updateSearchType = this.updateSearchType.bind(this);
+        this.state = { searchCommand: '', results: [] };
         this.search = this.search.bind(this);
         this.showSelected = this.showSelected.bind(this);
-    }
-
-    updateSearchType(event) {
-        var command = event.target.value;
-        if (command.indexOf("index=") === 0 || command.indexOf("|") !== -1) {
-            this.setState({ searchType: "splunk" });
-        }
-        else if (command.indexOf("elasticsearch") === 0) {
-            this.setState({ searchType: "elasticsearch" });
-        }
-        else {
-            this.setState({ searchType: "..." })
-        }
-        this.setState({ searchCommand: command });
+        this.onCommandChanged = this.onCommandChanged.bind(this);
     }
 
     showSelected(event) {
         alert("Do NOT select this item again");
+    }
+
+    onCommandChanged(event) {
+        this.setState({ searchCommand: event.target.value });
     }
 
     search(event) {
@@ -42,10 +32,11 @@ class Search extends React.Component {
             }
         );
     }
+
     render() {
         return (
             <div>
-                <Searchbar search={this.search} searchType={this.state.searchType} updateSearchType={this.updateSearchType} />
+                <Searchbar onSearch={this.search} onCommandChanged={this.onCommandChanged} />
                 {
                     (typeof this.state.results !== 'undefined' && this.state.results.length > 0 && !this.state.loading) ?
                         <ResultsTable results={this.state.results} showSelected={this.showSelected} /> :

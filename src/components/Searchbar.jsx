@@ -7,8 +7,18 @@ class Searchbar extends React.Component {
         return (
             <div className="searchbar-form">
                 <Form inline>
-                    <FormControl type="textarea" id="searchbar-searchbox" placeholder="Search.." onChange={this.props.updateSearchType} />
-                    <Button size="lg" className="btn searchbar-submit" onClick={this.props.search} >{this.props.searchType}</Button>
+                    <FormControl
+                        type="textarea"
+                        id="searchbar-searchbox"
+                        placeholder="Search.."
+                        onChange={this.props.onCommandChanged}
+                    />
+                    <Button
+                        size="lg"
+                        className="btn searchbar-submit"
+                        onClick={this.props.onSearch} >
+                        Search
+                    </Button>
                 </Form>
             </div>
         );
