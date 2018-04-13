@@ -4,3 +4,9 @@
     transform: translateX(-50%);
     margin-top: 40px;
 }
+
+.results-counter {
+    position: fixed;
+    left: 5%;
+    transform: translateX(-50%);
+}
