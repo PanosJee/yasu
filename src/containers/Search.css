@@ -6,7 +6,5 @@
 }
 
 .results-counter {
-    position: fixed;
-    left: 5%;
-    transform: translateX(-50%);
+    margin-left: 20px;
 }
